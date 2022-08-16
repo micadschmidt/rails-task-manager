@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-header">My Tasks</div>
+  <div class="card-body">
+    <ul class="list-group list-group-flush">
+    <% @tasks.each do |task| %>
+      <li class="list-group-item"> <%= link_to task.title, task_path(task), class: "text-decoration-none" %></li>
+    <% end %>
+    </ul>
+
+    <%= link_to "Add a new task", new_task_path, class: "text-decoration-none" %> <i class="fa-regular fa-square-plus"></i>
+  </div>
+</div>
